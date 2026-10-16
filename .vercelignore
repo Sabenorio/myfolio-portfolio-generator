@@ -1,0 +1,23 @@
+# Do not upload secrets or local-only data.
+.env
+.env.*
+!.env.example
+
+# Composer dependencies are installed by the PHP runtime.
+/vendor
+
+# Local Node dependencies are not needed in the deployment bundle.
+/node_modules
+
+# Exclude local databases, user uploads, logs, caches, and sessions.
+/database/*.sqlite
+/database/*.sqlite-*
+/storage/app/public/*
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/testing/*
+
+# Git internals.
+/.git
