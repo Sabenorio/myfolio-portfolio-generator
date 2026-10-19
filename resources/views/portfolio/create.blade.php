@@ -106,10 +106,26 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.45rem); line-height: 1.13; letter-spacing:
     cursor: pointer;
     transition: background .16s ease, color .16s ease, transform .16s ease;
 }
-.btn:hover { background: #173d2d; transform: translateY(-2px); }
-.btn.secondary { background: transparent; color: var(--ink); border-color: var(--rule); }
-.btn.secondary:hover { border-color: var(--ink); background: var(--sheet); }
-.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+.btn:hover { 
+    background: #173d2d; 
+    transform: translateY(-2px); 
+}
+.btn.secondary { 
+    background: transparent; 
+    color: var(--ink); 
+    border-color: var(--rule); 
+}
+.btn.secondary:hover { 
+    border-color: var(--ink); 
+    background: var(--sheet); 
+}
+.actions { 
+    display: flex; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 25px; 
+}
 
 .footer {
     display: flex;
@@ -284,7 +300,7 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.45rem); line-height: 1.13; letter-spacing:
                 <div><span class="eyebrow">Portfolio worksheet</span><h2>Tell us about yourself.</h2><p>Fields can be updated later. Start with what you know.</p></div>
                 <span class="form-state">01 / 02 · DETAILS</span>
             </div>
-            <form action="{{ route('portfolio.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('portfolio.store') }}" method="POST">
                 @csrf
 <section class="form-block" aria-labelledby="basics-title">
                 <div class="form-block-heading">
